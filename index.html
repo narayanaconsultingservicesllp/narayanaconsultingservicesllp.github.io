@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Narayana Consulting Services LLP - End-to-End Software Solutions with Divine Excellence. Expert consulting, full-stack development, and cloud transformation services from Nashik, India.">
+    <meta name="keywords" content="software consulting, full-stack development, cloud transformation, software solutions, Nashik, India, agile development">
+    <meta name="author" content="Narayana Consulting Services LLP">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Narayana Consulting Services LLP - End-to-End Solutions, Divine Excellence">
+    <meta property="og:description" content="Expert software consulting with a grounded approach. Strategic communication, agile delivery, robust architecture, and clean code.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://narayanaconsultingservicesllp.github.io">
+    <meta property="og:image" content="https://narayanaconsultingservicesllp.github.io/assets/logo.png">
+    
+    <title>Narayana Consulting Services LLP - End-to-End Solutions, Divine Excellence</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bhagva: '#FF6B35',
+                        deepblue: '#1A3A52',
+                        gold: '#D4AF37',
+                        textdark: '#2C3E50'
+                    },
+                    fontFamily: {
+                        'cinzel': ['Cinzel', 'serif'],
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-inter text-textdark bg-white">
+
+    <!-- Sticky Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="#hero" class="flex items-center space-x-3">
+                        <img src="assets/logo.png" alt="Narayana Consulting Services" class="h-12 w-auto">
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#philosophy" class="nav-link text-white hover:text-gold transition-colors duration-300">Philosophy</a>
+                    <a href="#services" class="nav-link text-white hover:text-gold transition-colors duration-300">Services</a>
+                    <a href="#about" class="nav-link text-white hover:text-gold transition-colors duration-300">About</a>
+                    <a href="#contact" class="nav-link text-white hover:text-gold transition-colors duration-300">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#philosophy" class="mobile-nav-link block px-3 py-2 text-white hover:text-gold transition-colors duration-300">Philosophy</a>
+                <a href="#services" class="mobile-nav-link block px-3 py-2 text-white hover:text-gold transition-colors duration-300">Services</a>
+                <a href="#about" class="mobile-nav-link block px-3 py-2 text-white hover:text-gold transition-colors duration-300">About</a>
+                <a href="#contact" class="mobile-nav-link block px-3 py-2 text-white hover:text-gold transition-colors duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 sri-yantra-bg"></div>
+        
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-br from-deepblue via-deepblue/95 to-blue-900"></div>
+        
+        <!-- Content -->
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <!-- Logo -->
+                <div class="mb-8 animate-fade-in">
+                    <img src="assets/logo.png" alt="Narayana Consulting Services" class="h-32 md:h-48 w-auto mx-auto">
+                </div>
+                
+                <!-- Headline -->
+                <h1 class="font-cinzel text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-fade-in-up">
+                    End-to-End Solutions,<br>
+                    <span class="text-gold">Divine Excellence</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-gray-200 mb-10 animate-fade-in-up animation-delay-200">
+                    Software consulting rooted in tradition, powered by innovation
+                </p>
+                
+                <!-- CTA Button -->
+                <a href="#contact" class="inline-block bg-bhagva hover:bg-bhagva/90 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl animate-fade-in-up animation-delay-400">
+                    Start Your Transformation
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Philosophy Section - The Four Ayudhas -->
+    <section id="philosophy" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-cinzel text-4xl md:text-5xl font-bold text-deepblue mb-4">The Four Ayudhas</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Our philosophy is inspired by the four divine weapons of Lord Vishnu, each representing a core value in our approach to software excellence
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Shankh Card -->
+                <div class="ayudha-card reveal-on-scroll opacity-0">
+                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-gold vedic-pattern-bg">
+                        <div class="flex justify-center mb-6">
+                            <div class="w-24 h-24">
+                                <svg viewBox="0 0 100 100" class="w-full h-full">
+                                    <!-- Shankh (Conch) Icon -->
+                                    <path d="M50 10 Q30 20 25 40 Q20 60 30 75 Q40 90 55 85 Q70 80 75 65 Q80 50 70 35 Q60 20 50 10 M40 40 Q45 35 50 40 Q55 45 50 50 Q45 55 40 50 Q35 45 40 40" 
+                                          fill="#D4AF37" stroke="#1A3A52" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="font-cinzel text-2xl font-bold text-deepblue mb-3 text-center">Shankh</h3>
+                        <p class="text-lg text-gold font-semibold mb-3 text-center">Strategic Communication & Resonance</p>
+                        <p class="text-gray-600 text-center">
+                            Like the divine conch that resonates across realms, we create clear communication channels that align stakeholders, teams, and systems in perfect harmony.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Chakra Card -->
+                <div class="ayudha-card reveal-on-scroll opacity-0">
+                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-gold vedic-pattern-bg">
+                        <div class="flex justify-center mb-6">
+                            <div class="w-24 h-24">
+                                <svg viewBox="0 0 100 100" class="w-full h-full">
+                                    <!-- Chakra (Discus) Icon -->
+                                    <circle cx="50" cy="50" r="35" fill="none" stroke="#D4AF37" stroke-width="3"/>
+                                    <circle cx="50" cy="50" r="25" fill="none" stroke="#1A3A52" stroke-width="2"/>
+                                    <circle cx="50" cy="50" r="8" fill="#D4AF37"/>
+                                    <line x1="50" y1="15" x2="50" y2="35" stroke="#1A3A52" stroke-width="2"/>
+                                    <line x1="50" y1="65" x2="50" y2="85" stroke="#1A3A52" stroke-width="2"/>
+                                    <line x1="15" y1="50" x2="35" y2="50" stroke="#1A3A52" stroke-width="2"/>
+                                    <line x1="65" y1="50" x2="85" y2="50" stroke="#1A3A52" stroke-width="2"/>
+                                    <line x1="25" y1="25" x2="38" y2="38" stroke="#1A3A52" stroke-width="2"/>
+                                    <line x1="62" y1="62" x2="75" y2="75" stroke="#1A3A52" stroke-width="2"/>
+                                    <line x1="75" y1="25" x2="62" y2="38" stroke="#1A3A52" stroke-width="2"/>
+                                    <line x1="38" y1="62" x2="25" y2="75" stroke="#1A3A52" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="font-cinzel text-2xl font-bold text-deepblue mb-3 text-center">Chakra</h3>
+                        <p class="text-lg text-gold font-semibold mb-3 text-center">Agile Delivery & Future-Proof Engineering</p>
+                        <p class="text-gray-600 text-center">
+                            The spinning wheel of time represents our commitment to agile methodologies, iterative improvement, and building systems that stand the test of time.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Gada Card -->
+                <div class="ayudha-card reveal-on-scroll opacity-0">
+                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-gold vedic-pattern-bg">
+                        <div class="flex justify-center mb-6">
+                            <div class="w-24 h-24">
+                                <svg viewBox="0 0 100 100" class="w-full h-full">
+                                    <!-- Gada (Mace) Icon -->
+                                    <rect x="42" y="60" width="16" height="35" fill="#1A3A52" rx="2"/>
+                                    <ellipse cx="50" cy="30" rx="20" ry="25" fill="#D4AF37" stroke="#1A3A52" stroke-width="2"/>
+                                    <circle cx="50" cy="25" r="8" fill="#1A3A52"/>
+                                    <circle cx="35" cy="35" r="5" fill="#1A3A52"/>
+                                    <circle cx="65" cy="35" r="5" fill="#1A3A52"/>
+                                    <rect x="44" y="55" width="12" height="8" fill="#D4AF37"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="font-cinzel text-2xl font-bold text-deepblue mb-3 text-center">Gada</h3>
+                        <p class="text-lg text-gold font-semibold mb-3 text-center">Robust Architecture & Scalable Systems</p>
+                        <p class="text-gray-600 text-center">
+                            The mighty mace symbolizes our focus on building powerful, resilient architectures that can handle any challenge and scale with your business growth.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Padma Card -->
+                <div class="ayudha-card reveal-on-scroll opacity-0">
+                    <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-gold vedic-pattern-bg">
+                        <div class="flex justify-center mb-6">
+                            <div class="w-24 h-24">
+                                <svg viewBox="0 0 100 100" class="w-full h-full">
+                                    <!-- Padma (Lotus) Icon -->
+                                    <ellipse cx="50" cy="70" rx="8" ry="25" fill="#D4AF37" transform="rotate(-30 50 70)"/>
+                                    <ellipse cx="50" cy="70" rx="8" ry="25" fill="#D4AF37" transform="rotate(30 50 70)"/>
+                                    <ellipse cx="50" cy="70" rx="8" ry="25" fill="#D4AF37"/>
+                                    <ellipse cx="50" cy="60" rx="12" ry="20" fill="#1A3A52" transform="rotate(-20 50 60)"/>
+                                    <ellipse cx="50" cy="60" rx="12" ry="20" fill="#1A3A52" transform="rotate(20 50 60)"/>
+                                    <ellipse cx="50" cy="60" rx="12" ry="20" fill="#1A3A52"/>
+                                    <circle cx="50" cy="50" r="8" fill="#D4AF37"/>
+                                    <circle cx="50" cy="50" r="4" fill="#1A3A52"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="font-cinzel text-2xl font-bold text-deepblue mb-3 text-center">Padma</h3>
+                        <p class="text-lg text-gold font-semibold mb-3 text-center">Clean Code & Ethical Innovation</p>
+                        <p class="text-gray-600 text-center">
+                            The sacred lotus rising pure from water represents our dedication to clean code, best practices, and ethical technology that uplifts humanity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-cinzel text-4xl md:text-5xl font-bold text-deepblue mb-4">Our Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive solutions tailored to your digital transformation journey
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Software Consulting -->
+                <div class="service-card reveal-on-scroll opacity-0">
+                    <div class="glass-card rounded-xl p-8 h-full">
+                        <div class="flex justify-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-bhagva to-bhagva/70 rounded-full flex items-center justify-center">
+                                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="font-cinzel text-2xl font-bold text-deepblue mb-4 text-center">Software Consulting</h3>
+                        <p class="text-gray-600 text-center mb-6">
+                            Strategic guidance for your technology initiatives. We help you navigate complex technical decisions, optimize architectures, and establish best practices.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Technology Strategy</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Architecture Review</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Process Optimization</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Full-Stack Development -->
+                <div class="service-card reveal-on-scroll opacity-0">
+                    <div class="glass-card rounded-xl p-8 h-full">
+                        <div class="flex justify-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-deepblue to-blue-700 rounded-full flex items-center justify-center">
+                                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="font-cinzel text-2xl font-bold text-deepblue mb-4 text-center">Full-Stack Development</h3>
+                        <p class="text-gray-600 text-center mb-6">
+                            End-to-end application development from concept to deployment. We build scalable, maintainable solutions using modern technologies.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Web Applications</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>API Development</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Database Design</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Cloud Transformation -->
+                <div class="service-card reveal-on-scroll opacity-0">
+                    <div class="glass-card rounded-xl p-8 h-full">
+                        <div class="flex justify-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-gold to-yellow-600 rounded-full flex items-center justify-center">
+                                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="font-cinzel text-2xl font-bold text-deepblue mb-4 text-center">Cloud Transformation</h3>
+                        <p class="text-gray-600 text-center mb-6">
+                            Migrate and optimize your infrastructure for the cloud. We ensure seamless transitions with minimal disruption and maximum efficiency.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>AWS/Azure/GCP</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>DevOps & CI/CD</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Infrastructure as Code</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient-to-br from-deepblue to-blue-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="reveal-on-scroll opacity-0">
+                    <h2 class="font-cinzel text-4xl md:text-5xl font-bold mb-6">Rooted in Tradition,<br>Powered by Innovation</h2>
+                    <div class="space-y-4 text-lg text-gray-200">
+                        <p>
+                            Based in <span class="text-gold font-semibold">Nashik, India</span>, Narayana Consulting Services LLP brings together the wisdom of ancient principles with cutting-edge technology solutions.
+                        </p>
+                        <p>
+                            We believe in a grounded approach to software development—one that respects timeless values while embracing modern innovation. Our team combines deep technical expertise with a commitment to ethical practices and sustainable solutions.
+                        </p>
+                        <p>
+                            Whether you're a startup finding your footing or an enterprise scaling new heights, we provide the strategic guidance and technical excellence you need to succeed in today's digital landscape.
+                        </p>
+                        <div class="mt-8 pt-8 border-t border-gold/30">
+                            <h3 class="font-cinzel text-2xl font-bold mb-4">Our Approach</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-gold mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span><strong>Global Standards:</strong> World-class quality and best practices</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-gold mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span><strong>Client Partnership:</strong> Your success is our mission</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-gold mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span><strong>Ethical Technology:</strong> Solutions that uplift and empower</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reveal-on-scroll opacity-0">
+                    <div class="relative">
+                        <!-- Decorative Element with Sacred Geometry -->
+                        <div class="sacred-geometry-container bg-white/10 backdrop-blur-sm rounded-2xl p-12 border border-gold/30">
+                            <svg viewBox="0 0 200 200" class="w-full h-full opacity-30">
+                                <!-- Sri Yantra simplified -->
+                                <circle cx="100" cy="100" r="90" fill="none" stroke="currentColor" stroke-width="1" class="text-gold"/>
+                                <circle cx="100" cy="100" r="70" fill="none" stroke="currentColor" stroke-width="1" class="text-gold"/>
+                                <circle cx="100" cy="100" r="50" fill="none" stroke="currentColor" stroke-width="1" class="text-gold"/>
+                                <polygon points="100,30 150,120 50,120" fill="none" stroke="currentColor" stroke-width="1" class="text-gold"/>
+                                <polygon points="100,170 150,80 50,80" fill="none" stroke="currentColor" stroke-width="1" class="text-gold"/>
+                                <polygon points="30,100 120,150 120,50" fill="none" stroke="currentColor" stroke-width="1" class="text-gold"/>
+                                <polygon points="170,100 80,150 80,50" fill="none" stroke="currentColor" stroke-width="1" class="text-gold"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-cinzel text-4xl md:text-5xl font-bold text-deepblue mb-4">Let's Transform Together</h2>
+                <p class="text-xl text-gray-600">
+                    Ready to embark on your digital transformation journey? Get in touch with us.
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 reveal-on-scroll opacity-0">
+                <form id="contact-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-semibold text-deepblue mb-2">Full Name *</label>
+                        <input type="text" id="name" name="name" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bhagva focus:border-transparent transition-all duration-300"
+                               placeholder="Your name">
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-semibold text-deepblue mb-2">Email Address *</label>
+                        <input type="email" id="email" name="email" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bhagva focus:border-transparent transition-all duration-300"
+                               placeholder="your.email@example.com">
+                    </div>
+                    
+                    <div>
+                        <label for="company" class="block text-sm font-semibold text-deepblue mb-2">Company</label>
+                        <input type="text" id="company" name="company"
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bhagva focus:border-transparent transition-all duration-300"
+                               placeholder="Your company name">
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-semibold text-deepblue mb-2">Message *</label>
+                        <textarea id="message" name="message" rows="5" required
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bhagva focus:border-transparent transition-all duration-300"
+                                  placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    
+                    <button type="submit"
+                            class="w-full bg-gold hover:bg-gold/90 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                        Send Message
+                    </button>
+                </form>
+                
+                <div class="mt-8 pt-8 border-t border-gray-200 text-center">
+                    <p class="text-gray-600 mb-2">Or reach us directly at:</p>
+                    <a href="mailto:narayanaconsultingservicesllp@gmail.com" class="text-bhagva hover:text-deepblue font-semibold text-lg transition-colors duration-300">
+                        narayanaconsultingservicesllp@gmail.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-deepblue text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <img src="assets/logo.png" alt="Narayana Consulting Services" class="h-16 w-auto mb-4">
+                    <p class="text-gray-300">
+                        End-to-End Solutions, Divine Excellence
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="font-cinzel text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#philosophy" class="text-gray-300 hover:text-gold transition-colors duration-300">Philosophy</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-gold transition-colors duration-300">Services</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-gold transition-colors duration-300">About</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-gold transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-cinzel text-lg font-bold mb-4">Connect</h3>
+                    <p class="text-gray-300 mb-2">Nashik, India</p>
+                    <a href="mailto:narayanaconsultingservicesllp@gmail.com" class="text-gold hover:text-white transition-colors duration-300">
+                        narayanaconsultingservicesllp@gmail.com
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2026 Narayana Consulting Services LLP. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
